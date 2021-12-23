@@ -11,7 +11,7 @@ int partition(int a[], int low, int high);
  */
 void quickSort(int a[], int low, int high) {
     if (low < high) {
-        // Pivot's index
+        // Pivot's index.
         // After the partition, elements to the left of pi 
         // is less than pivot whereas elements to the right
         // is greater than or equal to pivot.
@@ -26,9 +26,9 @@ void quickSort(int a[], int low, int high) {
 }
 
 int partition(int a[], int low, int high) {
-    // typically, use randome index as pivot
+    // typically, use random index as pivot
     int pivot = a[high];    // use last element as pivot
-    int pi = low;           // pivot index
+    int pi = low;           // partition index
 
     for (int i = low; i < high; i++) {
         if (a[i] < pivot) {
