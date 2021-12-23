@@ -7,7 +7,8 @@ int partition(int a[], int low, int high);
  * Time complexity: Best and ave - O(n lg n).
  * Worst case - partition always pick the smallest or greatest
  * element as pivot. O(n^2).
- * Stable: Current implementation is NOT stable.
+ * Stable: Current implementation is NOT stable. Can be made
+ * to be stable by using (value, pos) tuples.
  */
 void quickSort(int a[], int low, int high) {
     if (low < high) {

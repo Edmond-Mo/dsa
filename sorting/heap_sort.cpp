@@ -6,6 +6,21 @@
 void bubble_down(int a[], int n, int p);
 void bubble_up(int a[], int n, int p);
 
+/*
+ * Time complexity: O(n lg n). Heap construction using our
+ * fast method is actually O(n). Overall is still O(n lg n).
+ * Auxiliary space: O(1)
+ * Stable: Not stale in current implementation. To make it
+ * stable, we can take the position of the elements into
+ * consideration. Compare tuple as (value, pos) -
+ *      (4, 4) > (4, 2)
+ * Can use the same idea for quick sort.
+ *
+ * Also good for finding k largest elements of an array;
+ * construc heap (linear time) then pop k times.
+ * O(n + k lg n)
+ *
+ */
 void heapSort(int a[], int n) {
     // First, use the 'fast' method to heapify the array
     // in place. 'Fast' means using the array content as is
